@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About – Jesus Victory Center</title>
+
+  <!-- SEO & Responsive -->
+  <meta name="description" content="Learn more about Jesus Victory Center, our mission, service times, and location." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Leaflet Mini Map -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    defer
+  ></script>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="brand">Jesus Victory Center</div>
+
+  <div class="nav-links" aria-label="Primary navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="sermons.html">Sermons</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<main class="wrap about-section">
+
+  <!-- Back Button -->
+  <a href="index.html" class="btn back-btn">
+    ← Back to Home
+  </a>
+
+  <!-- About Card -->
+  <section class="card">
+    <h2>About Our Church</h2>
+    <p class="muted">
+      Jesus Victory Center is a community of believers dedicated to preaching the Gospel,
+      building strong faith, and impacting lives with love and truth.
+      We welcome everyone and believe in spiritual growth through worship, prayer,
+      and service to our community.
+    </p>
+  </section>
+
+  <!-- Service Times -->
+  <section class="card spaced">
+    <h2>Service Times</h2>
+
+    <p class="muted">
+      <strong>Sunday Services</strong><br><br>
+
+      🕢 <strong>7:30 AM – 9:00 AM</strong><br>
+      Hour of Power (Prayer & Intercessory)<br><br>
+
+      🔥 <strong>9:00 AM – 10:30 AM</strong><br>
+      Second Service<br><br>
+
+      🙌 <strong>10:30 AM – 1:00 PM</strong><br>
+      Third Service
+    </p>
+
+    <hr class="divider" />
+
+    <p class="muted">
+      <strong>Weekday Services</strong><br><br>
+
+      📖 <strong>Wednesday · 5:00 PM – 7:00 PM</strong><br>
+      Home Bible Churches<br><br>
+
+      ✨ <strong>Thursday · 5:00 PM – 7:00 PM</strong><br>
+      Midweek Service (Miracle Service)
+    </p>
+  </section>
+
+  <!-- Location -->
+  <section class="card spaced">
+    <h2>Our Location</h2>
+
+    <p class="muted">
+      Use the interactive map below to easily locate Jesus Victory Center.
+      Zoom and move the map to follow the roads clearly.
+    </p>
+
+    <div id="church-map" class="map-box"></div>
+
+    <a
+      href="https://share.google/7ZDvb0NYPtBBvapNn"
+      target="_blank"
+      rel="noopener"
+      class="btn spaced-btn"
+    >
+      Open Directions in Google Maps
+    </a>
+  </section>
+
+  <!-- Videos -->
+  <section class="grid videos-section spaced">
+    <div class="card">
+      <h3>Our Church in Action</h3>
+      <video controls class="video">
+        <source src="https://files.catbox.moe/s2m7ur.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="card">
+      <h3>Experience Worship</h3>
+      <video controls class="video">
+        <source src="https://files.catbox.moe/eljm65.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © <span id="year"></span> Jesus Victory Center · All Rights Reserved
+</footer>
+
+<!-- Scripts -->
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const churchCoords = [-1.2243, 36.8791];
+
+    const map = L.map("church-map").setView(churchCoords, 15);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: "© OpenStreetMap contributors",
+    }).addTo(map);
+
+    L.marker(churchCoords)
+      .addTo(map)
+      .bindPopup("<strong>Jesus Victory Center</strong><br>We are here.")
+      .openPopup();
+  });
+</script>
+
+</body>
+</html>

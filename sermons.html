@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sermons | Jesus Victory Center</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Watch and be encouraged by sermons from Jesus Victory Center. Grow in faith, love, and thanksgiving through the Word of God."
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+  <div class="brand">Jesus Victory Center</div>
+  <div class="nav-links" aria-label="Primary navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="sermons.html" class="active">Sermons</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- Back Button -->
+  <a href="index.html" class="btn back-btn">
+    ← Back to Home
+  </a>
+
+  <!-- PAGE INTRO -->
+  <section class="welcome-section">
+    <div class="wrap">
+      <div class="welcome-card">
+        <h2>Sermons & Teachings</h2>
+        <p>
+          Be encouraged and strengthened through the preaching of the Word.
+          These messages are shared to help you grow in faith, love, and obedience to God.
+        </p>
+        <p class="muted">
+          “So then faith comes by hearing, and hearing by the word of God.” — Romans 10:17
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERMONS GRID -->
+  <section aria-label="Sermons">
+    <div class="wrap grid">
+
+      <!-- SERMON 1 -->
+      <div class="card">
+        <h3>Knowing God Through Love</h3>
+        <p class="muted">
+          A powerful teaching on understanding God’s nature through love and walking in Christ-like compassion.
+        </p>
+
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/j_Ej1FznzCo"
+            title="Knowing God Through Love"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- SERMON 2 -->
+      <div class="card">
+        <h3>Always Be Thankful</h3>
+        <p class="muted">
+          A reminder to live a life of gratitude in every season, trusting God in all circumstances.
+        </p>
+
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/C70fVUZ_y3c"
+            title="Always Be Thankful"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- SERMON 3 -->
+      <div class="card">
+        <h3>Calling Upon the Lord</h3>
+        <p class="muted">
+          An encouraging message on prayer, dependence on God, and calling upon His name in times of need.
+        </p>
+
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/ae-3qJ9XdBo"
+            title="Calling Upon the Lord"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>More sermons coming 🔜.</p>
+  <p>© <span id="year"></span> Jesus Victory Center · All Rights Reserved</p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
